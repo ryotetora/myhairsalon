@@ -1,0 +1,47 @@
+/* ヘッダーCSS */
+header {
+  width: 100%;
+  padding: 15px 0;
+  margin: 0 auto;
+  text-align: center;
+}
+header .headline{
+  font-size: 32px;
+}
+.nav-list {
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 auto;
+  background-color: darkslategray;
+  color: white;
+}
+.nav-list-item {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+/* ヘッダーCSS */
+
+/* フロントCSS */
+
+.content-list {
+  display: flex;
+}
+
+.main-text {
+  width: 400px;
+}
+.main-content {
+  margin-left: auto;
+}
+/* フロントCSS */
+
+/* フッターCSS */
+.footer {
+  background-color: darkslategrey;
+  width: 100%;
+  padding: 15px 0;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
