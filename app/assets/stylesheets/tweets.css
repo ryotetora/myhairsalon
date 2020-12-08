@@ -22,6 +22,8 @@ header .headline{
 }
 /* ヘッダーCSS */
 
+/* フロントCSS */
+
 .content-list {
   display: flex;
 }
@@ -31,4 +33,15 @@ header .headline{
 }
 .main-content {
   margin-left: auto;
+}
+/* フロントCSS */
+
+/* フッターCSS */
+.footer {
+  background-color: darkslategrey;
+  width: 100%;
+  padding: 15px 0;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
 }
