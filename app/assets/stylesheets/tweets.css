@@ -34,38 +34,39 @@ header {
 }
 /* ヘッダーCSS */
 
-/* フロントCSS */
+/* フロントCSS---------------------------------------------------- */
 
-.content-list {
+.wrapper{
+  min-height: 100vh;
+  position: relative;
+  /* フッターを下に固定 */
+}
+
+.main-tweet {
   display: flex;
+  /* 投稿画像を横並び */
+}
+/* サイドバーの画像とか幅色、モノトーン */
+.content_post {
+  height: 250px;
+  width: 200px;
+  background-size: cover;
 }
 
-.main-text {
-  width: 400px;
-  background-image: url('main.jpg');
-  background-size: contain;
-  filter: grayscale(100%);
-  color: white;
-}
-.main-content {
-  margin-left: auto;
-}
-.sub-text {
-  text-align: center;
-  margin-top: 20px;
-}
-.description {
-  text-align: left;
-  font-size: 13px;
-}
-/* フロントCSS */
+/* フロントCSS-------------------------------   ------------------ */
+
+
+
+
+
 
 /* フッターCSS */
 .footer {
   background-color: darkslategrey;
   width: 100%;
-  padding: 15px 0;
-  margin: 0 auto;
+  padding: 20px 0;
   text-align: center;
   color: white;
+  position: absolute;
+  bottom: 0;
 }
