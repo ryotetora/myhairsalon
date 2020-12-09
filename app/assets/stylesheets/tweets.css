@@ -1,4 +1,4 @@
-/* ヘッダーCSS */
+/* ヘッダーCSS---------------------------------------------------- */
 header {
   width: 100%;
   padding: 15px 0;
@@ -12,55 +12,62 @@ header {
   background-color: darkslategray;
   color: white;
   display: flex;
+  justify-content: space-between;
 }
 .site-title {
   margin-left: 20px;
-  margin-right: 100px;
   font-size: 30px;
   font-family: 'Playball', cursive;
+}
+.search-form {
+  padding: 10px 30px 0 0px;
+  font-size: 13px;
+  font-family: sans-serif
 }
 .nav-list-item {
   list-style: none;
   display: inline-block;
-  margin: 0 20px;
+  margin: 0 30px;
   padding: 10px 0 0 0px;
   font-size: 13px;
   font-family: sans-serif
+  /* メニュー一覧のあれこれ */
 }
+
 .nav-list-item a {
   text-decoration: none;
   color: white;
   /* リンク挿入しても文字色変えない、アンダーライン入らないようにしてる */
 }
-/* ヘッダーCSS */
+/* ヘッダーCSS---------------------------------------------------- */
 
 /* フロントCSS---------------------------------------------------- */
 
 .wrapper{
   min-height: 100vh;
   position: relative;
+
   /* フッターを下に固定 */
 }
 
 .main-tweet {
   display: flex;
+  flex-wrap: wrap;
   /* 投稿画像を横並び */
 }
-/* サイドバーの画像とか幅色、モノトーン */
-.content_post {
-  height: 250px;
-  width: 200px;
-  background-size: cover;
+.tweet-img {
+  margin: 1px;
 }
+/* 投稿画像同士をわずかに空間作る */
 
-/* フロントCSS-------------------------------   ------------------ */
-
-
-
+/* フロントCSS----------------------------------------------------- */
 
 
 
-/* フッターCSS */
+
+
+
+/* フッターCSS----------------------------------------------------- */
 .footer {
   background-color: darkslategrey;
   width: 100%;
@@ -70,3 +77,4 @@ header {
   position: absolute;
   bottom: 0;
 }
+/* フッターCSS----------------------------------------------------- */
