@@ -1,6 +1,8 @@
 <!-- header -->
   <ul class="nav-list">
     <div class="site-title">MyHairsalon</div>
+    <div>
+    <li class="nav-list-item"><%= link_to 'Home', root_path, method: :get %></li>
     <li class="nav-list-item">Tweet</li>
     <li class="nav-list-item">About</li>
     <li class="nav-list-item"><%= link_to '投稿する', new_tweet_path, method: :get %></li>
@@ -9,10 +11,12 @@
   <%# サインインしてるならログアウトのみ表示 %>
     <li class="nav-list-item"><%= link_to current_user.nickname, "#" %></li>
     <%# プロフィール編集かマイページとか飛べるようにあとでしてもよい %>
-    <li class="nav-list-item"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+    <li class="nav-list-item"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
   <% else %>
   <%# してないなら新規登録、ログインを表示 %>
     <li class="nav-list-item"><%= link_to '新規登録', new_user_registration_path, method: :get %></li>
     <li class="nav-list-item"><%= link_to 'ログイン', new_user_session_path,method: :get %></li>
     <% end %>
+    </div>
+    <div class="search-form">検索</div>
   </ul>
