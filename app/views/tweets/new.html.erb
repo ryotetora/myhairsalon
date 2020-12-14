@@ -1,11 +1,24 @@
-<div class="contents row">
-  <div class="container">
-    <h3>投稿する</h3>
-    <%= form_with(model: @tweet, local: true) do |form| %>
-      <%= form.text_field :style_name, placeholder: "Style name" %>
+<%= render "header" %>
+<div class="form-wrapper">
+  <h1>Style投稿</h1>
+  <%= form_with(model: @tweet, local: true) do |form| %>
+    <div class="form-item">
+      <%= form.text_field :style_name, placeholder: "Style Name" %>
+    </div>
+    <div class="form-item">
       <%= form.file_field :image, class: 'hidden' %>
-      <%= form.text_area :text, placeholder: "text", rows: "10" %>
-      <%= form.submit "SEND" %>
-    <% end %>
+    </div>
+    <div class="form-item">
+      <%= form.text_area :text, placeholder: "スタイルの説明をしましょう", rows: "10" %>
+    </div>
+    <div class="button-panel">
+      <%= form.submit "SEND" , class: "button" %>
+    </div>
+  <% end %>
+  <div class="form-footer">
+    <p><a href="#">Create an account</a></p>
+    <p><a href="#">Forgot password?</a></p>
   </div>
 </div>
+<%= render "footer" %>
+<%# とりあえず保存には成功したのでここからカラム増やしたりしていく %>
