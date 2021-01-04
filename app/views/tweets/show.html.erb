@@ -1,0 +1,17 @@
+<%= render "header" %>
+<div class="form-wrapper">
+  <div class="show-style">
+    <div class="style-name">
+      <%= @tweet.style_name %>
+    </div>
+    <div class="style-image">
+      <%= image_tag @tweet.image, size: '400x400' , class: "tweet-img" %>
+    </div>
+    <div class="style-text">
+      <%= @tweet.text %>
+    </div>
+  </div>
+</div>
+
+
+<%# 詳細途中、CSS改善後、ユーザーとスタイル結び付けてネストする、アソシ組む %>
