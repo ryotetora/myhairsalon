@@ -62,8 +62,13 @@ header {
 }
 .tweet-img {
   margin-left: 1px;
-  height: 200px;
-  width: 200px;
+  height: 280px;
+  /* width: 200px; */
+}
+
+.tweet-img img {
+  height: 100%;
+  /* width: 100%; */
 }
 /* 投稿画像同士をわずかに空間作る */
 
@@ -99,6 +104,13 @@ header {
   padding: 20px;
 }
 
+.style-image {
+  width: 400px;
+  margin: 0 auto;
+}
+.style-image img {
+  width: 100%;
+}
 .style-text {
   margin-top: 20px;
 }
