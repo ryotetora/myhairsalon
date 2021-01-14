@@ -11,6 +11,15 @@
       <%= @tweet.text %>
     </div>
   </div>
+  <div class="show-style-change">
+    <div class="edit-btn">スタイル編集
+      <%# 編集機能 %>
+    </div>
+    <div class="destroy-btn">
+      <%= link_to "投稿削除", tweet_path(@tweet.id), method: :delete %>
+      <%# 削除機能 %>
+    </div>
+  </div>
 </div>
 
 
