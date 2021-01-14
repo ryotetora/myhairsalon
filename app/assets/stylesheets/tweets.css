@@ -99,4 +99,32 @@ header {
   padding: 20px;
 }
 
+.style-text {
+  margin-top: 20px;
+}
+
+.show-style-change {
+  display: flex;
+  padding: 30px 0;
+}
+
+.edit-btn {
+  color: #fff;
+  background-color: #f16272;
+  padding: 8px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.destroy-btn {
+  background-color: rgb(219, 212, 212);
+  padding: 8px;
+  border-radius: 10px;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.destroy-btn a {
+ text-decoration: none;
+ color: #5E5E5E;
 /* 詳細ページーCSS------------------------------------------------- */
