@@ -39,6 +39,10 @@ header {
   /* メニュー一覧のあれこれ */
 }
 
+.nav-list-item a:hover {
+  color: #dfdddd;
+}
+
 .nav-list-item a {
   text-decoration: none;
   color: white;
@@ -125,6 +129,7 @@ header {
   background-color: #f16272;
   padding: 8px;
   border-radius: 10px;
+  /* 丸くする効果 */
   margin: 0 auto;
 }
 
