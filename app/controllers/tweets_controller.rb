@@ -24,6 +24,14 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find(params[:id])
   end
 
+  def destroy
+    @tweet = Tweet.find(params[:id])
+    if @tweet.destroy
+      redirect_to root_path
+      # 削除に成功すればrootにとばす
+    end
+  end
+
   private
   def tweet_params
     params.require(:tweet).permit(:style_name, :text, :image)
