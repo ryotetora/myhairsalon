@@ -12,7 +12,8 @@
     </div>
   </div>
   <div class="show-style-change">
-    <div class="edit-btn">スタイル編集
+    <div class="edit-btn">
+    <%= link_to 'スタイル編集', edit_tweet_path(@tweet.id), method: :get %>
       <%# 編集機能 %>
     </div>
     <div class="destroy-btn">

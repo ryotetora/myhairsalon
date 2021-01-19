@@ -24,6 +24,20 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find(params[:id])
   end
 
+
+  def edit
+    @tweet = Tweet.find(params[:id])
+  end
+
+  def update
+    tweet = Tweet.find(params[:id])
+    if tweet.update(tweet_params)
+    else
+    render :edit
+    # 失敗すれば編集冒頭にとばす
+    end
+  end
+
   def destroy
     @tweet = Tweet.find(params[:id])
     if @tweet.destroy

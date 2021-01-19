@@ -41,6 +41,7 @@ header {
 
 .nav-list-item a:hover {
   color: #dfdddd;
+  /* 文字上にきてる場合、色が変わる */
 }
 
 .nav-list-item a {
@@ -130,6 +131,11 @@ header {
   margin: 0 auto;
 }
 
+.edit-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .destroy-btn {
   background-color: rgb(219, 212, 212);
   padding: 8px;
@@ -141,4 +147,13 @@ header {
 .destroy-btn a {
  text-decoration: none;
  color: #5E5E5E;
+}
 /* 詳細ページーCSS------------------------------------------------- */
+
+/* 更新ページCSS--------------------------------------------------- */
+.update-message {
+  text-decoration: none;
+  color: #5E5E5E;
+}
+
+/* 更新ページCSS--------------------------------------------------- */
