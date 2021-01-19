@@ -41,6 +41,7 @@ header {
 
 .nav-list-item a:hover {
   color: #dfdddd;
+  /* 文字上にきてる場合、色が変わる */
 }
 
 .nav-list-item a {
@@ -128,6 +129,11 @@ header {
   border-radius: 10px;
   /* 丸くする効果 */
   margin: 0 auto;
+}
+
+.edit-btn a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .destroy-btn {
