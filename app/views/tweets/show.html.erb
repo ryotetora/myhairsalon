@@ -1,0 +1,26 @@
+<%= render "header" %>
+<div class="form-wrapper">
+  <div class="show-style">
+    <div class="style-name">
+      <%= @tweet.style_name %>
+    </div>
+    <div class="style-image">
+      <%= image_tag @tweet.image , class: "tweet-img-show" %>
+    </div>
+    <div class="style-text">
+      <%= @tweet.text %>
+    </div>
+  </div>
+  <div class="show-style-change">
+    <div class="edit-btn">スタイル編集
+      <%# 編集機能 %>
+    </div>
+    <div class="destroy-btn">
+      <%= link_to "投稿削除", tweet_path(@tweet.id), method: :delete %>
+      <%# 削除機能 %>
+    </div>
+  </div>
+</div>
+
+
+<%# 詳細途中、CSS改善後、ユーザーとスタイル結び付けてネストする、アソシ組む %>

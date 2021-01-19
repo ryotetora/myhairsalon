@@ -3,9 +3,11 @@
   <div class="content-list">
     <div class="main-tweet">
     <% @tweets.each do |tweet| %>
-    <%= image_tag tweet.image, size: '200x200' , class: "tweet-img" %>
-<%# あえて気軽に見やすく画像のみをタイル式に羅列 %>
+    <%= link_to tweet_path(tweet.id), method: :get do %>
+    <%= image_tag tweet.image, class: "tweet-img" %>
     <% end %>
+    <% end %>
+    <%# ここの記述はまだきれいに見える書き方あると思うendendは汚い %>
     </div>
   </div>
   <%= render "footer" %>
