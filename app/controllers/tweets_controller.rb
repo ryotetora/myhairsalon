@@ -2,7 +2,8 @@ class TweetsController < ApplicationController
   before_action :authenticate_user!, only:[:create]
   # ログインしてなければ投稿はできずログイン画面にとばす
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.all.order('created_at DESC')
+    #  全レコード情報をもつインスタンス変数を生成、並びを降順指定
   end
 
   def new
