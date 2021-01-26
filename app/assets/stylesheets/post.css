@@ -10,9 +10,9 @@ body {
 
 /* Form Layout */
 .form-wrapper {
-  background: #fafafa;
+  background: rgb(236, 234, 234);
   margin: 3em auto;
-  padding: 0 1em;
+  padding: 0 1em 30px 1em;
   max-width: 570px;
 }
 

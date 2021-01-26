@@ -9,24 +9,21 @@ header {
   text-align: center;
   padding: 10px 0;
   margin: 0 auto;
-  background-color: rgb(57, 85, 142);
-  color: white;
+  background-color: white;
   display: flex;
   justify-content: space-between;
 }
 .site-title {
-  margin-left: 20px;
+  color: black;
+  height: 40px;
+  margin: 10px 0 0 30px;
   font-size: 30px;
-  font-family: 'Alegreya Sans', sans-serif;
-}
-.site-title p {
-  font-size: 13px;
-  margin-top: 10px;
   font-family: 'Alegreya Sans', sans-serif;
 }
 .search-form {
   padding: 10px 30px 0 0px;
   font-size: 13px;
+  color: black;
   font-family: 'Alegreya Sans', sans-serif;
 }
 .nav-list-item {
@@ -34,6 +31,7 @@ header {
   display: inline-block;
   margin: 0 30px;
   padding: 10px 0 0 0px;
+  color: black;
   font-size: 13px;
   font-family: 'Alegreya Sans', sans-serif;
   /* メニュー一覧のあれこれ */
@@ -46,20 +44,49 @@ header {
 
 .nav-list-item a {
   text-decoration: none;
-  color: white;
+  color: black;
   /* リンク挿入しても文字色変えない、アンダーライン入らないようにしてる */
 }
 /* ヘッダーCSS---------------------------------------------------- */
 
 /* フロントCSS---------------------------------------------------- */
 
-.wrapper{
+.wrapper {
   min-height: 100vh;
   position: relative;
-
   /* フッターを下に固定 */
 }
 
+.main-content {
+  display: flex;
+  margin-bottom: 100px;
+}
+.main-image {
+  filter: grayscale(80%);
+  /* ヘッダ画像をモノトーン調に */
+  background-image: url(images/main5.jpg);
+  background-size: cover;
+  height: 500px;
+  width: 70%;
+}
+.main-text {
+  height: 500px;
+  width: 30%;
+  background-color: rgb(236, 234, 234);
+  text-align: center;
+}
+.top-text {
+  margin: 50px auto 50px auto;
+  font-size: 25px;
+  font-weight: bold;
+}
+.top-text p {
+  margin-top: 10px;
+}
+/* 上段との距離感 */
+.middle-text {
+  font-size: 15px;
+}
 .main-tweet {
   display: flex;
   flex-wrap: wrap;
@@ -82,11 +109,11 @@ header {
 
 /* フッターCSS----------------------------------------------------- */
 .footer {
-  background-color:rgb(57, 85, 142);
+  background-color:white;
   width: 100%;
   padding: 10px 0;
   text-align: center;
-  color: white;
+  color: black;
   position: absolute;
   bottom: 0;
 }
