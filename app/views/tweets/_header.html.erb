@@ -1,22 +1,23 @@
 <!-- header -->
   <ul class="nav-list">
-    <div class="site-title">MyHairsalon<p>きっとあなたに合う美容師が見つかる！</div>
+    <div class="site-title">MyHairsalon
+    </div>
     <div>
-    <li class="nav-list-item"><%= link_to 'Home', root_path, method: :get %></li>
-    <li class="nav-list-item">Tweet</li>
+    <%# メニュー----------------------------------------------------------------------------- %>
+    <li class="nav-list-item"><%= link_to 'Top', root_path, method: :get %></li>
     <li class="nav-list-item">About</li>
-    <li class="nav-list-item"><%= link_to '投稿する', new_tweet_path, method: :get %></li>
-    <li class="nav-list-item">Style</li>
+    <li class="nav-list-item"><%= link_to 'Style', new_tweet_path, method: :get %></li>
   <% if user_signed_in? %>
   <%# サインインしてるならログアウトのみ表示 %>
-    <li class="nav-list-item"><%= link_to "マイページ", "/users/#{current_user.id}" %></li>
+    <li class="nav-list-item"><%= link_to "Mypage", "/users/#{current_user.id}" %></li>
     <%# マイページへリンクなのでログイン中ユーザー(current) %>
-    <li class="nav-list-item"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+    <li class="nav-list-item"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
   <% else %>
   <%# してないなら新規登録、ログインを表示 %>
-    <li class="nav-list-item"><%= link_to '新規登録', new_user_registration_path, method: :get %></li>
-    <li class="nav-list-item"><%= link_to 'ログイン', new_user_session_path,method: :get %></li>
+    <li class="nav-list-item"><%= link_to 'Sign up', new_user_registration_path, method: :get %></li>
+    <li class="nav-list-item"><%= link_to 'Login', new_user_session_path,method: :get %></li>
     <% end %>
     </div>
-    <div class="search-form">検索</div>
+    <%# メニュー----------------------------------------------------------------------------- %>
+    <div class="search-form">Search</div>
   </ul>
