@@ -2,6 +2,7 @@ class TweetsController < ApplicationController
   before_action :authenticate_user!, only:[:create]
   # before_action :same_user_check, only: [:edit, :destroy]
   # ログインしてなければ投稿はできずログイン画面にとばす
+  # リファクタリングこれから
 
   def index
     @tweets = Tweet.all.order('created_at DESC')
