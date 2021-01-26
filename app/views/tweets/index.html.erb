@@ -1,6 +1,16 @@
 <div class="wrapper">
 <%= render "header" %>
   <div class="content-list">
+    <div class="main-content">
+      <div class="main-text">
+        <div class="top-text">美容室探しに悩むのは<p>もうやめませんか？
+        </div>
+        <div class="middle-text">MyHairsalonでは<P>来店前に直接、美容師さんに質問したり<p>リアルなサロンスタイルの投稿を見て<p>あなたと技術の合う美容師を見つける事ができます。
+        </div>
+      </div>
+      <div class="main-image">
+      </div>
+    </div>
     <div class="main-tweet">
     <% @tweets.each do |tweet| %>
     <%= link_to tweet_path(tweet.id), method: :get do %>
