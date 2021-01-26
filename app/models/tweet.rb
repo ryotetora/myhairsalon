@@ -3,4 +3,7 @@ class Tweet < ApplicationRecord
   # activestorageとのアソシエーション
 
   validates :text, presence: true
+  
+  belongs_to :user
+  # user:tweet 1:多
 end

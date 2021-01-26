@@ -1,0 +1,18 @@
+<div class="wrapper">
+<%= render "tweets/header" %>
+ 
+  <div class="content-list">
+    <div class="user-show-description">
+    <%= @nickname %>さんの投稿一覧/
+    <%= link_to "プロフィール編集", edit_user_path %>
+    /詳細から編集・削除ができます
+    </div>
+    <div class="main-tweet">
+    <% @tweets.each do |tweet| %>
+    <%= link_to tweet_path(tweet.id), method: :get do %>
+    <%= image_tag tweet.image, class: "tweet-img" %>
+    <% end %>
+    <% end %>
+    <%# ここの記述はまだきれいに見える書き方あると思うendendは汚い %>
+    </div>
+  </div>

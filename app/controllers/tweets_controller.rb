@@ -1,8 +1,11 @@
 class TweetsController < ApplicationController
   before_action :authenticate_user!, only:[:create]
+  # before_action :same_user_check, only: [:edit, :destroy]
   # ログインしてなければ投稿はできずログイン画面にとばす
+
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.all.order('created_at DESC')
+    #  全レコード情報をもつインスタンス変数を生成、並びを降順指定
   end
 
   def new
@@ -27,6 +30,8 @@ class TweetsController < ApplicationController
 
   def edit
     @tweet = Tweet.find(params[:id])
+    redirect_to root_path unless current_user.id == @tweet.user_id
+    # ログインユーザーと投稿者が違うならTOPにとばす
   end
 
   def update
@@ -48,7 +53,6 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:tweet).permit(:style_name, :text, :image)
+    params.require(:tweet).permit(:style_name, :text, :image).merge(user_id: current_user.id)
   end
-
 end

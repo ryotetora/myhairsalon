@@ -9,8 +9,8 @@
     <li class="nav-list-item">Style</li>
   <% if user_signed_in? %>
   <%# サインインしてるならログアウトのみ表示 %>
-    <li class="nav-list-item"><%= link_to current_user.nickname, "#" %></li>
-    <%# プロフィール編集かマイページとか飛べるようにあとでしてもよい %>
+    <li class="nav-list-item"><%= link_to "マイページ", "/users/#{current_user.id}" %></li>
+    <%# マイページへリンクなのでログイン中ユーザー(current) %>
     <li class="nav-list-item"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
   <% else %>
   <%# してないなら新規登録、ログインを表示 %>

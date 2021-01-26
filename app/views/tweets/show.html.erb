@@ -11,6 +11,7 @@
       <%= @tweet.text %>
     </div>
   </div>
+  <% if user_signed_in? && current_user.id == @tweet.user_id %>
   <div class="show-style-change">
     <div class="edit-btn">
     <%= link_to 'スタイル編集', edit_tweet_path(@tweet.id), method: :get %>
@@ -21,6 +22,7 @@
       <%# 削除機能 %>
     </div>
   </div>
+  <% end %>
 </div>
 
 
