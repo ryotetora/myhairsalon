@@ -5,5 +5,6 @@ class Tweet < ApplicationRecord
   validates :text, presence: true
   
   belongs_to :user
-  # user:tweet 1:多
+  has_many :comments
+# 各テーブルとのアソシエーション
 end
