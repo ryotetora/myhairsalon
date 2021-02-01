@@ -30,6 +30,9 @@ class TweetsController < ApplicationController
     @comments = @tweet.comments.includes(:user)
   end
 
+  def search
+    @tweets = Tweet.search(params[:keyword])
+  end
 
   def edit
     @tweet = Tweet.find(params[:id])
