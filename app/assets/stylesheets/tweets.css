@@ -47,6 +47,12 @@ header {
   color: black;
   /* リンク挿入しても文字色変えない、アンダーライン入らないようにしてる */
 }
+
+.search-btn {
+  font-family: FontAwesome;
+  height: 40px;
+  width: 40px;
+}
 /* ヘッダーCSS---------------------------------------------------- */
 
 /* フロントCSS---------------------------------------------------- */
@@ -182,39 +188,6 @@ header {
  text-decoration: none;
  color: #5E5E5E;
 }
-/* 詳細ページーCSS------------------------------------------------- */
-
-/* 更新ページCSS--------------------------------------------------- */
-.update-message {
-  text-decoration: none;
-  color: #5E5E5E;
-}
-
-/* 更新ページCSS--------------------------------------------------- */
-/* マイページCSS--------------------------------------------------- */
-.user-show-description {
-  margin: 10px;
-}
-
-.user-show-description a {
-  text-decoration: none;
-  color: #5E5E5E;
-}
-/* マイページCSS--------------------------------------------------- */
-/* コメントCSS----------------------------------------------------- */
-.comment-btn {
-  margin: 10px auto;
-  width: 100%;
-}
-
-
-.comments-user {
-  text-decoration: none;
-  color: black;
-}
-/* コメントCSS----------------------------------------------------- */
-
-/* .tweet-img-show */
 
 table{
   border-collapse: collapse;
@@ -255,3 +228,34 @@ table td.icon.whale{
 table td.icon.crab{
   background-image: url(icon-crab.png)
 }
+/* 詳細ページーCSS------------------------------------------------- */
+
+/* 更新ページCSS--------------------------------------------------- */
+.update-message {
+  text-decoration: none;
+  color: #5E5E5E;
+}
+
+/* 更新ページCSS--------------------------------------------------- */
+/* マイページCSS--------------------------------------------------- */
+.user-show-description {
+  margin: 10px;
+}
+
+.user-show-description a {
+  text-decoration: none;
+  color: #5E5E5E;
+}
+/* マイページCSS--------------------------------------------------- */
+/* コメントCSS----------------------------------------------------- */
+.comment-btn {
+  margin: 10px auto;
+  width: 100%;
+}
+
+
+.comments-user {
+  text-decoration: none;
+  color: black;
+}
+/* コメントCSS----------------------------------------------------- */
