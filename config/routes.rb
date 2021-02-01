@@ -3,5 +3,8 @@ Rails.application.routes.draw do
   root to: "tweets#index"
   # アクセスがあればindexにとばす
   resources :users, only: [:edit, :update, :show]
-  resources :tweets, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+  resources :tweets do
+    resources :comments, only: [:create]
+    # どの投稿に対してか区別できるようにネスト
+  end
 end

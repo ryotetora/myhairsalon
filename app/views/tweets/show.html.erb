@@ -7,8 +7,25 @@
     <div class="style-image">
       <%= image_tag @tweet.image , class: "tweet-img-show" %>
     </div>
-    <div class="style-text">
-      <%= @tweet.text %>
+    <div class="style-date">
+      <table>
+      <tr>
+        <th>担当者</th>
+        <th>特技</th>
+      </tr>
+      <tr>
+        <td>サロン名</td>
+        <td>OCEAN TOKYO</td>
+      </tr>
+      <tr>
+        <td>所在地</td>
+        <td>東京</td>
+      </tr>
+      <tr>
+        <td>スタイルコメント</td>
+        <td><%= @tweet.text %></td>
+      </tr>
+      </table>
     </div>
   </div>
   <% if user_signed_in? && current_user.id == @tweet.user_id %>
@@ -23,7 +40,28 @@
     </div>
   </div>
   <% end %>
+  <div class="container">
+    <% if user_signed_in? %>
+      <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "気になったスタイルに質問してみましょう！", rows: "2" %>
+        <%= form.submit "コメント投稿", class: "comment-btn" %>
+      <% end %>
+    <% else %>
+      <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
+    <% end %>
+    <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% @comments.each do |comment| %>
+        <p>
+          <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}",class: "comments-user" %>：</strong>
+          <%= comment.text %>
+        </p>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 
-<%# 詳細途中、CSS改善後、ユーザーとスタイル結び付けてネストする、アソシ組む %>
+
+
+<%# 表データの中身つぎはいれていくカラムふやすこと、アクティブストレージつかう %>

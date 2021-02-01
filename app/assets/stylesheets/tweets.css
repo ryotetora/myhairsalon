@@ -87,6 +87,13 @@ header {
 .middle-text {
   font-size: 15px;
 }
+.new-tweet {
+  text-align: center;
+  font-family: 'Alegreya Sans', sans-serif;
+  color: black;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
 .main-tweet {
   display: flex;
   flex-wrap: wrap;
@@ -192,4 +199,59 @@ header {
 .user-show-description a {
   text-decoration: none;
   color: #5E5E5E;
+}
+/* マイページCSS--------------------------------------------------- */
+/* コメントCSS----------------------------------------------------- */
+.comment-btn {
+  margin: 10px auto;
+  width: 100%;
+}
+
+
+.comments-user {
+  text-decoration: none;
+  color: black;
+}
+/* コメントCSS----------------------------------------------------- */
+
+/* .tweet-img-show */
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+table tr{
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+}
+
+table tr:hover{
+  background-color: #d4f0fd;
+}
+
+table th,table td{
+  text-align: center;
+  width: 25%;
+  padding: 15px 0;
+}
+
+table td.icon{
+  background-size: 35px;
+  background-position: left 5px center;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+}
+
+table td.icon.bird{
+  background-image: url(icon-bird.png)
+}
+
+table td.icon.whale{
+  background-image: url(icon-whale.png)
+}
+
+table td.icon.crab{
+  background-image: url(icon-crab.png)
 }
