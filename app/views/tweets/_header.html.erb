@@ -18,6 +18,9 @@
     <li class="nav-list-item"><%= link_to 'Login', new_user_session_path,method: :get %></li>
     <% end %>
     </div>
-    <%# メニュー----------------------------------------------------------------------------- %>
-    <div class="search-form">Search</div>
+    <%= form_with(url: search_tweets_path, local: true, method: :get, class: "search-form") do |form| %>
+    <%= form.text_field :keyword, placeholder: "Style Search", class: "search-input" %>
+    <%= form.submit "\uF002", class: "search-btn" %>
+    <% end %>
+    <%# 検索フォーム現状スタイル説明文の中での検索になっている %>
   </ul>
