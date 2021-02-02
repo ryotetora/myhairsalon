@@ -8,6 +8,12 @@
 
 <%# --------------------------登録項目--------------------------------------- %>
     <div class="form-item">
+    <%= f.label :アイコン設定%>
+    </div>
+    <div>
+    <%= f.file_field :img %>
+    </div>
+    <div class="form-item">
       <%= f.label :ニックネーム%>
     </div>
     <div class='field-input'>
@@ -32,8 +38,6 @@
      <div class='field-input'>
       <%= f.password_field :password_confirmation, autocomplete: "off"%>
     </div>
-
-
     <div class="form-item">
       <%= f.label :サロン名%>
     </div>
