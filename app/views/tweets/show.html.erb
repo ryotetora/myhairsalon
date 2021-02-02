@@ -10,20 +10,32 @@
     <div class="style-date">
       <table>
       <tr>
-        <th>担当者</th>
-        <th>特技</th>
+        <th><b>担当者</b></th>
+        <th><%= @user.nickname %></th>
       </tr>
       <tr>
-        <td>サロン名</td>
-        <td>OCEAN TOKYO</td>
-      </tr>
-      <tr>
-        <td>所在地</td>
-        <td>東京</td>
-      </tr>
-      <tr>
-        <td>スタイルコメント</td>
+        <td><b>スタイルコメント</b></td>
         <td><%= @tweet.text %></td>
+      </tr>
+      <tr>
+        <td><b>サロン名</b></td>
+        <td><%= @user.salon_name %></td>
+      </tr>
+      <tr>
+        <td><b>得意なスタイル</b></td>
+        <td><%= @user.like_style %></td>
+      </tr>
+      <tr>
+        <td><b>所在地</b></td>
+        <td><%= @user.prefecture %></td>
+      </tr>
+      <tr>
+        <td><b>公式HP</b></td>
+        <td><%= @user.salon_hp %></td>
+      </tr>
+      <tr>
+        <td><b>電話番号</b></td>
+        <td><%= @user.phone %></td>
       </tr>
       </table>
     </div>
