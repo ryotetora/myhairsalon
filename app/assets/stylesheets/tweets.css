@@ -228,6 +228,16 @@ table td.icon.whale{
 table td.icon.crab{
   background-image: url(icon-crab.png)
 }
+
+  .user-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;  /* 円形にする */
+    position: relative;  /* 基準値とする */
+    overflow: hidden;    /* はみ出た部分を非表示 */
+    object-fit: cover;
+  }
+/* アバターの画像を円形に表示 */
 /* 詳細ページーCSS------------------------------------------------- */
 
 /* 更新ページCSS--------------------------------------------------- */
