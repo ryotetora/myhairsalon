@@ -11,8 +11,12 @@
       <table>
       <tr>
         <th><b>担当者</b></th>
-        <th><%= @user.nickname %></th>
-      </tr>
+        <th><div><%= image_tag @user.img, class: 'user-img' if @user.img.attached? %>
+            </div>
+            <div><%= @user.nickname %>
+            </div>
+        </th>
+        <%# アバターの表示と有無確認 %>
       <tr>
         <td><b>スタイルコメント</b></td>
         <td><%= @tweet.text %></td>
@@ -72,8 +76,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-<%# 表データの中身つぎはいれていくカラムふやすこと、アクティブストレージつかう %>
