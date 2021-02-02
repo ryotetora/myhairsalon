@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
 
   private
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :salon_name, :like_style, :salon_hp, :prefecture, :phone])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:nickname, :salon_name, :like_style, :salon_hp, :prefecture, :phone, :img])
+    # 新規登録の許可
   end
   # デフォルトで使えないパラメータの許可
 end
