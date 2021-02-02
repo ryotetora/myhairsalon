@@ -13,6 +13,7 @@
     <div class='field-input'>
       <%= f.text_field :nickname, autofocus: true%>
     </div>
+
     <div class="form-item">
       <%= f.label :email%>
     </div>
@@ -31,6 +32,39 @@
      <div class='field-input'>
       <%= f.password_field :password_confirmation, autocomplete: "off"%>
     </div>
+
+
+    <div class="form-item">
+      <%= f.label :サロン名%>
+    </div>
+    <div class='field-input'>
+      <%= f.text_field :salon_name, placeholder: "美容師の場合入力"%>
+    </div>
+    <div class="form-item">
+      <%= f.label :得意なスタイル%>
+    </div>
+    <div class='field-input'>
+      <%= f.text_field :like_style, placeholder: "美容師の場合入力"%>
+    </div>
+    <div class="form-item">
+      <%= f.label :サロン公式HP%>
+    </div>
+    <div class='field-input'>
+      <%= f.text_field :salon_hp, placeholder: "美容師の場合入力"%>
+    </div>
+    <div class="form-item">
+      <%= f.label :所在地%>
+    </div>
+    <div class='field-input'>
+      <%= f.text_field :prefecture, placeholder: "美容師の場合入力"%>
+    </div>
+    <div class="form-item">
+      <%= f.label :電話番号%>
+    </div>
+    <div class='field-input'>
+      <%= f.text_field :phone, placeholder: "ハイフンなし"%>
+    </div>
+
 <%# --------------------------登録項目--------------------------------------- %>
     <div class='button-panel'>
       <%= f.submit "登録する", class: 'button'%>
