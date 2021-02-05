@@ -59,3 +59,6 @@ gem 'devise'
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 # アクティブストレージのためのgem
+
+gem "aws-sdk-s3", require: false
+# AWS S3使用のため
