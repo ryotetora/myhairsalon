@@ -3,17 +3,17 @@
 Myhairsalon
  
 ## アプリケーション概要
-
-美容師の個人での集客をサポートするアプリ
-
+ 
+まだ顧客の少ないデビュー間もない美容師の集客をサポートするアプリ
+ 
 ## URL
-
-デプロイ次第記入
+ 
+https://myhairsalon28181.herokuapp.com/
  
 ## テスト用アカウント
  
-- ID       :
-- password :
+- Email    :aaa@333
+- password :aaa111
  
 ## 利用方法
  
