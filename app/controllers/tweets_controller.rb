@@ -25,8 +25,6 @@ class TweetsController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    # 誰のスタイル詳細なのかをuserから受け渡し変数化
     @tweet = Tweet.find(params[:id])
     @comment = Comment.new
     @comments = @tweet.comments.includes(:user)

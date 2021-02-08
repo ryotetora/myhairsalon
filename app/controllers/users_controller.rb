@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    # @tweet = Tweet.find(params[:id])
+    @tweet = Tweet.find(params[:id])
     @nickname = current_user.nickname
     @tweets = current_user.tweets
 # マイページに表示したい情報を変数化

@@ -11,9 +11,9 @@
       <table>
       <tr>
         <th><b>担当者</b></th>
-        <th><div><%= image_tag @user.img, class: 'user-img' if @user.img.attached? %>
+        <th><div><%= image_tag @tweet.user.img, class: 'user-img' if @tweet.user.img.attached? %>
             </div>
-            <div><%= @user.nickname %>
+            <div><%= @tweet.user.nickname %>
             </div>
         </th>
         <%# アバターの表示と有無確認 %>
@@ -23,23 +23,23 @@
       </tr>
       <tr>
         <td><b>サロン名</b></td>
-        <td><%= @user.salon_name %></td>
+        <td><%= @tweet.user.salon_name %></td>
       </tr>
       <tr>
         <td><b>得意なスタイル</b></td>
-        <td><%= @user.like_style %></td>
+        <td><%= @tweet.user.like_style %></td>
       </tr>
       <tr>
         <td><b>所在地</b></td>
-        <td><%= @user.prefecture %></td>
+        <td><%= @tweet.user.prefecture %></td>
       </tr>
       <tr>
         <td><b>公式HP</b></td>
-        <td><%= @user.salon_hp %></td>
+        <td><%= @tweet.user.salon_hp %></td>
       </tr>
       <tr>
         <td><b>電話番号</b></td>
-        <td><%= @user.phone %></td>
+        <td><%= @tweet.user.phone %></td>
       </tr>
       </table>
     </div>
